@@ -32,6 +32,6 @@ after killing all enemies, player will be advanced to the next level. In multipl
 
 - We have an abstract class `AbstractObject`, which has a common implementation for all other classes. `PhysicalObject` and `MovableObject` are abstract classes as well, but have different interfaces for its own needs.
 - Having these architecture allows us to avoid unnecessary copy/paste when creating class objects, or invoking it's methods, as we only should pass `AbstractClass` in function parameters.
-- `Bomb` and `Bonus` will implement `PhysicalObject`, while `Player` and `Enemy` will implement `MovableObject`.
+- `Bomb` and `Bonus` will implement `PhysicalObject`, while `Player` and `Enemy` will implement `MovableObject`. For these classe we will use polymorphism, as the vast majority of functions are same, but they should vary in implementation
 
 
