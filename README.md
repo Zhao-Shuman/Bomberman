@@ -20,13 +20,14 @@
 ## Specification
 We will be implementing a classic bomberman game. User interface allows to choose between singleplayer(game against computer)
 and multiplayer(game on one device for at least 2 players). At the beginning of the game each player has 1 bomb, which is replenished after each detonation.
-However, for increasing a probability of winning, players are recommended to collect bonuses, which are randomly scattered across the map [Bonuses llist](#task).
-In singleplayer main goal is to kill all monsters by placing down and detonating bombs,
-after that, player will be advanced to the next level. In multiplayer the winner is decided by the last one standing alive. 
+However, for increasing a probability of winning, players are recommended to collect bonuses, which are randomly scattered across the map, see [Bonuses llist](#task).
+In singleplayer mode the main goal is to kill all monsters by placing down and detonating bombs,
+after killing all enemies, player will be advanced to the next level. In multiplayer the winner is decided by the last player standing alive. 
 
 
+## **Usage of polymorphism in this project**:
 
-
+![This is an image](/assets/README_assets/readme_scheme.png)
 
 * [General info](#general-info)
 * [Technologies](#technologies)
