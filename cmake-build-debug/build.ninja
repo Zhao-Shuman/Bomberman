@@ -55,6 +55,42 @@ build CMakeFiles/Bomberman.dir/main.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/U
   OBJECT_DIR = CMakeFiles\Bomberman.dir
   OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
 
+build CMakeFiles/Bomberman.dir/AbstractObject.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/AbstractObject.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\AbstractObject.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+
+build CMakeFiles/Bomberman.dir/Bomb.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Bomb.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\Bomb.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+
+build CMakeFiles/Bomberman.dir/Enemy.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Enemy.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\Enemy.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+
+build CMakeFiles/Bomberman.dir/App.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/App.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\App.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+
+build CMakeFiles/Bomberman.dir/Bonus.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Bonus.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\Bonus.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+
+build CMakeFiles/Bomberman.dir/Player.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Player.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\Player.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Bomberman
@@ -63,7 +99,7 @@ build CMakeFiles/Bomberman.dir/main.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/U
 #############################################
 # Link the executable Bomberman.exe
 
-build Bomberman.exe: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.obj
+build Bomberman.exe: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.obj CMakeFiles/Bomberman.dir/AbstractObject.cpp.obj CMakeFiles/Bomberman.dir/Bomb.cpp.obj CMakeFiles/Bomberman.dir/Enemy.cpp.obj CMakeFiles/Bomberman.dir/App.cpp.obj CMakeFiles/Bomberman.dir/Bonus.cpp.obj CMakeFiles/Bomberman.dir/Player.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Bomberman.dir

@@ -14,11 +14,11 @@ public:
 	Bonus () {}
 	virtual ~Bonus () {}
 //func which adds object to the map of physical objects
-	virtual void addObject (const AbstractObject &obj) const override {};
-	virtual void renderObject () const override {};
-	virtual void updateObject () const override {};
-	virtual pair<size_t, size_t> getCoordinates () const override {};
-	virtual bool checkCollision (const AbstractObject &object) const override {};
+	virtual void addObject (const AbstractObject &obj) const override;
+	virtual void renderObject () const override ;
+	virtual void updateObject () const override ;
+	virtual pair<size_t, size_t> getCoordinates () const override ;
+	virtual bool checkCollision (const AbstractObject &object) const override ;
 
 	BonusType getBonusType () {};
 
