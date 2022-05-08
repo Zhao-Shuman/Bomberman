@@ -19,19 +19,15 @@
 * https://en.wikipedia.org/wiki/Bomberman
 
 ## Specification
-We will be implementing a classic bomberman game. User interface allows to choose between singleplayer(game against computer)
-and multiplayer(game on one device for at least 2 players). At the beginning of the game each player has 1 bomb, which is replenished after each detonation.
-However, for increasing a probability of winning, players are recommended to collect bonuses, which are randomly scattered across the map, see [Bonuses llist](#task).
-In singleplayer mode the main goal is to kill all monsters by placing down and detonating bombs,
-after killing all enemies, player will be advanced to the next level. In multiplayer the winner is decided by the last player standing alive. 
+We will be implementing a classic Bomberman game. The user interface allows you to choose between single-player (game against the computer) and multiplayer(game on one device for at least 2 players). At the beginning of the game, each player has 1 bomb, which is replenished after each detonation. However, for increasing the probability of winning, players are recommended to collect bonuses, which are randomly scattered across the map, see Bonuses list. In single-player mode the main goal is to kill all monsters by placing down and detonating bombs, after killing all enemies, the player will be advanced to the next level. In multiplayer, the winner is decided by the last player standing alive.
 
 
 ## **Usage of polymorphism in this project**:
 ### **Abstract scheme of my implementation:**
 ![This is an image](/assets/README_assets/readme_scheme.png)
 
-- We have an abstract class `AbstractObject`, which has a common implementation for all other classes. `PhysicalObject` and `MovableObject` are abstract classes as well, but have different interfaces for its own needs.
-- Having these architecture allows us to avoid unnecessary copy/paste when creating class objects, or invoking it's methods, as we only should pass `AbstractClass` in function parameters.
-- `Bomb` and `Bonus` will implement `PhysicalObject`, while `Player` and `Enemy` will implement `MovableObject`. For these classe we will use polymorphism, as the vast majority of functions are same, but they should vary in implementation
+- We have an abstract class `AbstractObject`, which has a common implementation for all other classes. `PhysicalObject` and `MovableObject` are abstract classes as well but have different interfaces for their own needs.
+- Having this architecture allows us to avoid unnecessary copy/paste when creating class objects, or invoking its methods, as we only should pass `AbstractClass` in function parameters.
+- `Bomb` and `Bonus` will implement `PhysicalObject`, while `Player` and `Enemy` will implement `MovableObject`. For these classes we will use polymorphism, as the vast majority of functions are the same, but they should vary in implementation
 
 
