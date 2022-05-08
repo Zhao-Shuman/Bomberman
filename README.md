@@ -29,22 +29,5 @@ after killing all enemies, player will be advanced to the next level. In multipl
 
 ![This is an image](/assets/README_assets/readme_scheme.png)
 
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
-## General info
-This project is simple Lorem ipsum dolor generator.
-	
-
-	
-## Setup
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
 
 ![This is an image](/assets/README_assets/readme_bomber.png)
