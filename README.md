@@ -1,4 +1,5 @@
 # Classic Bomberman game
+![This is an image](/assets/README_assets/readme_bomber.png)
 ## Task
 **Implement next variations of the game:**
 * Game for 2 players on 1 device.
@@ -26,25 +27,11 @@ after killing all enemies, player will be advanced to the next level. In multipl
 
 
 ## **Usage of polymorphism in this project**:
-
+### **Abstract scheme of my implementation:**
 ![This is an image](/assets/README_assets/readme_scheme.png)
 
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
+- We have an abstract class `AbstractObject`, which has a common implementation for all other classes. `PhysicalObject` and `MovableObject` are abstract classes as well, but have different interfaces for its own needs.
+- Having these architecture allows us to avoid unnecessary copy/paste when creating class objects, or invoking it's methods, as we only should pass `AbstractClass` in function parameters.
+- `Bomb` and `Bonus` will implement `PhysicalObject`, while `Player` and `Enemy` will implement `MovableObject`.
 
-## General info
-This project is simple Lorem ipsum dolor generator.
-	
 
-	
-## Setup
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
-
-![This is an image](/assets/README_assets/readme_bomber.png)
