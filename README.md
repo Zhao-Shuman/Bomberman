@@ -1,5 +1,5 @@
 # Classic Bomberman game
-![This is an image](/assets/README_assets/readme_bomber.png)
+![This is an image](/src/assets/README_assets/readme_bomber.png)
 ## Task
 **Implement next variations of the game:**
 * Game for 2 players on 1 device.
@@ -28,7 +28,7 @@ after killing all enemies, player will be advanced to the next level. In multipl
 
 ## **Usage of polymorphism in this project**:
 ### **Abstract scheme of my implementation:**
-![This is an image](/assets/README_assets/readme_scheme.png)
+![This is an image](/src/assets/README_assets/readme_scheme.png)
 
 - We have an abstract class `AbstractObject`, which has a common implementation for all other classes. `PhysicalObject` and `MovableObject` are abstract classes as well, but have different interfaces for its own needs.
 - Having these architecture allows us to avoid unnecessary copy/paste when creating class objects, or invoking it's methods, as we only should pass `AbstractClass` in function parameters.

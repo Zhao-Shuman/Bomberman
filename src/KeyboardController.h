@@ -1,0 +1,10 @@
+#pragma once
+#ifndef BOMBERMAN_KEYBOARDCONTROLLER_H
+#define BOMBERMAN_KEYBOARDCONTROLLER_H
+
+
+class KeyboardController{
+
+};
+
+#endif //BOMBERMAN_KEYBOARDCONTROLLER_H
