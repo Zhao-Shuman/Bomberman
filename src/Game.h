@@ -8,6 +8,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "GameObject.h"
+#include "Game.h"
 
 class Game
 {
@@ -20,13 +21,15 @@ public:
 	void render ();
 	void clean ();
 	bool running () const {return isRunning;}
-
+//	boo
 	static SDL_Renderer *renderer;
 	static SDL_Event event;
 	static std::vector<std::unique_ptr<GameObject>> gameObjects;
+
 private:
 	SDL_Window *window{};
 	bool isRunning = true;
+
 
 };
 

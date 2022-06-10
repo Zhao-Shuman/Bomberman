@@ -21,7 +21,7 @@ set(SDL2_IMAGE_LIB_DIR C:/SDL/SDL_IMAGE/lib/x64)
 include_directories(${SDL2_IMAGE_INCLUDE_DIR})
 link_directories(${SDL2_IMAGE_LIB_DIR})
 
-add_executable(Bomberman src/main.cpp src/ErrorHandler.h src/Game.cpp src/Game.h src/ErrorHandler.cpp src/GameObject.h src/Player.cpp src/Player.h src/Map.cpp src/Map.h src/MapObject.h src/TextureManager.cpp src/TextureManager.h src/KeyboardController.h src/TransformObject.h src/Vector2D.cpp src/Vector2D.h)#PhysicalObject.h MovableObject.h AbstractObject.h Player.h Enemy.h EnemyType.h Bomb.h Bonus.h BonusType.h Game.h AbstractObject.cpp Bomb.cpp Enemy.cpp Game.cpp Bonus.cpp Player.cpp
+add_executable(Bomberman src/main.cpp src/ErrorHandler.h src/Game.cpp src/Game.h src/ErrorHandler.cpp src/GameObject.h src/Player.cpp src/Player.h src/Map.cpp src/Map.h src/MapObject.h src/TextureManager.cpp src/TextureManager.h src/KeyboardController.h src/TransformObject.h src/Vector2D.cpp src/Vector2D.h src/CircleCollision.h src/Enemy.cpp src/Enemy.h)#PhysicalObject.h MovableObject.h AbstractObject.h Player.h Enemy.h EnemyType.h Bomb.h Bonus.h BonusType.h Game.h AbstractObject.cpp Bomb.cpp Enemy.cpp Game.cpp Bonus.cpp Player.cpp
 
 
 

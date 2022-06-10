@@ -13,7 +13,7 @@ public:
 	int speed = 3;
 	int height = 32;
 	int width = 32;
-	int scale = 1;
+	float scale = 1.5f  ;
 
 	TransformObject ()
 	{

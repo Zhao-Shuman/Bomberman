@@ -3,12 +3,23 @@
 #include "Game.h"
 #include "ErrorHandler.h"
 #include "Player.h"
+#include "KeyboardController.h"
+#include "Map.h"
+#include "MapObject.h"
+#include "CircleCollision.h"
+#include "Enemy.h"
 
 using namespace std;
 
 SDL_Renderer *Game::renderer = nullptr;//static variable
 SDL_Event Game::event;//static variable
+
 std::vector<std::unique_ptr<GameObject>> Game::gameObjects;//static variable
+std::vector<std::unique_ptr<MapObject>> Map::mapObjects;//static variable
+std::vector<std::unique_ptr<MapObject>> Map::collidableMapObjects;//static variable
+
+unique_ptr<Map> map;
+
 
 
 void Game::initGame (const char *p_name, int p_xPos, int p_Ypos, int p_w, int p_h, bool fullscreen)
@@ -45,7 +56,14 @@ void Game::initGame (const char *p_name, int p_xPos, int p_Ypos, int p_w, int p_
 	//==========================================================================
 	isRunning = true;
 
-	gameObjects.emplace_back(make_unique<Player>("../src/assets/README_assets/player.png"));
+	map = make_unique<Map>();
+	map->initialize();
+	map->loadMap("../src/assets/dev/15x15.map", 15, 15);
+//	player = make_unique<Player>("../src/assets/images/bomberman.png");
+	gameObjects.emplace_back(make_unique<Enemy>("../src/assets/images/enemy_ovapi.png",32*2+2,32*3+2));
+	gameObjects.emplace_back(make_unique<Player>("../src/assets/images/bomberman.png", 32*2,32*3));
+//	gameObjects.emplace_back(player);
+
 
 }
 void Game::handleEvents ()
@@ -59,21 +77,38 @@ void Game::handleEvents ()
 		default:
 			break;
 	}
+
+
 }
 void Game::update ()
 {
-	for (const auto &obj: gameObjects)
+	for (const auto &obj: Game::gameObjects)
 	{
 		obj->update();
 	}
+//	for (const auto &obj: Game::gameObjects)
+//	{
+//
+//		for(const auto &obj2:Map::collidableMapObjects)
+//		{
+//			obj->checkCollision(*obj2);
+//		}
+//	}
+
 }
 void Game::render ()
 {
 	SDL_RenderClear(renderer);
-	for (const auto &obj: gameObjects)
+
+	for (const auto &obj: Map::mapObjects)
 	{
 		obj->draw();
 	}
+	for (const auto &obj: Game::gameObjects)
+	{
+		obj->draw();
+	}
+
 	SDL_RenderPresent(renderer);
 
 }

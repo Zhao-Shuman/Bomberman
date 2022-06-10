@@ -1,0 +1,27 @@
+#pragma once
+
+#ifndef BOMBERMAN_ENEMY_H
+#define BOMBERMAN_ENEMY_H
+
+#include "GameObject.h"
+#include "TransformObject.h"
+#include "Vector2D.h"
+#include "TextureManager.h"
+
+class Enemy:public GameObject
+{
+public:
+	Enemy(const char * p_filename, int p_x, int p_y);
+	~Enemy() override{SDL_DestroyTexture(texture);}
+	void update () override;
+	void draw () override;
+	void init () override;
+	bool checkCollision (const SDL_Rect &a,const SDL_Rect &b) override;
+	void setTex (const char *p_filename);
+
+	TransformObject transformObject;
+	Vector2D position;
+//	KeyboardController keyboardController;
+};
+
+#endif //BOMBERMAN_ENEMY_H

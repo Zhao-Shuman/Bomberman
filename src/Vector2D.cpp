@@ -74,12 +74,13 @@ Vector2D &Vector2D::operator* (const int &p_scale)
 	return *this;
 
 }
-Vector2D &Vector2D::zero ()
+Vector2D Vector2D::zero ()
 {
-	this->x = 0;
-	this->y = 0;
+	x = 0.0f;
+	y = 0.0f;
 
 	return *this;
+//	return *this;
 }
 
 

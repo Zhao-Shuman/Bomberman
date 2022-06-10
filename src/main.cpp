@@ -21,7 +21,7 @@ int main (int argc, char *args[])
 
 
 
-	game->initGame("Bomberman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 640, false);
+	game->initGame("Bomberman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 960, 960, false);
 	while (game->running())
 	{
 		frameStart = SDL_GetTicks(); //ticks since we first initialized sdl
