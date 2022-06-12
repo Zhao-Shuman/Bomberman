@@ -9,7 +9,6 @@ Map::Map ()
 Map::~Map ()
 {
 
-
 }
 void Map::loadMap (const std::string &filename, int sizeX, int sizeY)
 {
@@ -18,11 +17,13 @@ void Map::loadMap (const std::string &filename, int sizeX, int sizeY)
 	mapFile.open(filename);
 	SDL_Texture *tempTex;
 
-	for (int y = 0; y < sizeY; y++)
+	for (size_t y = 0, i = 0; y < sizeY; y++, i++)
 	{
-		for (int x = 0; x < sizeX; x++)
+		for (size_t x = 0, j = 0; x < sizeX; x++, j++)
 		{
 			mapFile.get(tile);//stores data in tile
+			int id_tile = atoi(&tile);
+			map_arr[i][j]=id_tile;
 			switch (atoi(&tile))
 			{
 				case 0:
@@ -50,7 +51,9 @@ void Map::loadMap (const std::string &filename, int sizeX, int sizeY)
 		}
 	}
 	mapFile.close();
-
+	for (int i = 0; i < 15; i++)
+		for (int j = 0; j < 15; j++)
+			cout << Map::map_arr[i][j] << " \n"[j == 15-1];
 }
 
 void Map::addTile (SDL_Texture *p_tex, int p_tileId, int p_x, int p_y)

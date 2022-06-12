@@ -8,18 +8,21 @@
 #include "MapObject.h"
 #include "CircleCollision.h"
 #include "Enemy.h"
-
+#include "EnemyOvapi.h"
 using namespace std;
 
 SDL_Renderer *Game::renderer = nullptr;//static variable
 SDL_Event Game::event;//static variable
 
+
+int Map::map_arr[15][15];//static variable
 std::vector<std::unique_ptr<GameObject>> Game::gameObjects;//static variable
 std::vector<std::unique_ptr<MapObject>> Map::mapObjects;//static variable
 std::vector<std::unique_ptr<MapObject>> Map::collidableMapObjects;//static variable
 
-unique_ptr<Map> map;
+unique_ptr<Map> map1;
 
+static unique_ptr<Player> player;//static variable
 
 
 void Game::initGame (const char *p_name, int p_xPos, int p_Ypos, int p_w, int p_h, bool fullscreen)
@@ -56,12 +59,16 @@ void Game::initGame (const char *p_name, int p_xPos, int p_Ypos, int p_w, int p_
 	//==========================================================================
 	isRunning = true;
 
-	map = make_unique<Map>();
-	map->initialize();
-	map->loadMap("../src/assets/dev/15x15.map", 15, 15);
-//	player = make_unique<Player>("../src/assets/images/bomberman.png");
-	gameObjects.emplace_back(make_unique<Enemy>("../src/assets/images/enemy_ovapi.png",32*2+2,32*3+2));
-	gameObjects.emplace_back(make_unique<Player>("../src/assets/images/bomberman.png", 32*2,32*3));
+	map1 = make_unique<Map>();
+	map1->initialize();
+	map1->loadMap("../src/assets/dev/15x15.map", 15, 15);
+
+
+	player = make_unique<Player>("../src/assets/images/bomberman.png",32*2,32*3, "player1");
+	gameObjects.emplace_back(make_unique<EnemyOvapi>("../src/assets/images/enemy_ovapi.png",32*12,32*3, "enemy_ovapi"));
+//	gameObjects.emplace_back(make_unique<Player>("../src/assets/images/bomberman.png", 32*2,32*3));
+	gameObjects.emplace_back(move(player));
+
 //	gameObjects.emplace_back(player);
 
 
@@ -86,24 +93,21 @@ void Game::update ()
 	{
 		obj->update();
 	}
-//	for (const auto &obj: Game::gameObjects)
-//	{
-//
-//		for(const auto &obj2:Map::collidableMapObjects)
-//		{
-//			obj->checkCollision(*obj2);
-//		}
-//	}
 
 }
 void Game::render ()
 {
 	SDL_RenderClear(renderer);
+		for (const auto &obj: Map::mapObjects)
+		{
+			obj->draw();
+		}
 
-	for (const auto &obj: Map::mapObjects)
+	for (const auto &obj: Map::collidableMapObjects)
 	{
 		obj->draw();
 	}
+
 	for (const auto &obj: Game::gameObjects)
 	{
 		obj->draw();

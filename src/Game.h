@@ -10,6 +10,8 @@
 #include "GameObject.h"
 #include "Game.h"
 
+class Bomb;
+
 class Game
 {
 public:
@@ -21,11 +23,15 @@ public:
 	void render ();
 	void clean ();
 	bool running () const {return isRunning;}
-//	boo
+	bool firstMapDrawing;
 	static SDL_Renderer *renderer;
 	static SDL_Event event;
+#define USE_FANCYPANTS
+#ifdef USE_FANCYPANTS
 	static std::vector<std::unique_ptr<GameObject>> gameObjects;
-
+#endif
+//	 unique_ptr<Player> player23;
+//	 uniPlayer::GameObject player2;
 private:
 	SDL_Window *window{};
 	bool isRunning = true;

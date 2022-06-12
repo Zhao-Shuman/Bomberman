@@ -3,6 +3,8 @@
 #define BOMBERMAN_TEXTUREMANAGER_H
 
 #include <iostream>
+#include "memory"
+
 
 #include "ErrorHandler.h"
 using namespace std;
@@ -13,6 +15,7 @@ class TextureManager{
 public:
 	static SDL_Texture * loadTexture(const char * p_filename);
 	static void draw(SDL_Texture * tex, SDL_Rect src, SDL_Rect dst );
+
 
 };
 

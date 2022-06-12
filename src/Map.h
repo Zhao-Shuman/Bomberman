@@ -29,6 +29,8 @@ public:
 	SDL_Texture *texture_walk_tile;
 	static std::vector<std::unique_ptr<MapObject>> mapObjects;
 	static std::vector<std::unique_ptr<MapObject>> collidableMapObjects;
+	static int map_arr[15][15];
+
 };
 
 #endif //BOMBERMAN_MAP_H

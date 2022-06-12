@@ -29,7 +29,7 @@ public:
 	}
 	~MapObject ()
 	{
-		SDL_DestroyTexture(texture);
+//		SDL_DestroyTexture(texture);
 	}
 	void draw () override
 	{
