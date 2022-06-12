@@ -49,47 +49,75 @@ cmake_ninja_workdir = C$:/Users/Alexandr/CLionProjects/Bomberman/cmake-build-deb
 
 build cmake_object_order_depends_target_Bomberman: phony || CMakeFiles/Bomberman.dir
 
-build CMakeFiles/Bomberman.dir/main.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/main.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/main.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/main.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\main.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
-build CMakeFiles/Bomberman.dir/AbstractObject.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/AbstractObject.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\AbstractObject.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/Game.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/Game.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\Game.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
-build CMakeFiles/Bomberman.dir/Bomb.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Bomb.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\Bomb.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/ErrorHandler.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/ErrorHandler.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\ErrorHandler.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
-build CMakeFiles/Bomberman.dir/Enemy.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Enemy.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\Enemy.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/Player.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/Player.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\Player.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
-build CMakeFiles/Bomberman.dir/App.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/App.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\App.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/Map.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/Map.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\Map.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
-build CMakeFiles/Bomberman.dir/Bonus.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Bonus.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\Bonus.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/TextureManager.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/TextureManager.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\TextureManager.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
-build CMakeFiles/Bomberman.dir/Player.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/Player.cpp || cmake_object_order_depends_target_Bomberman
-  DEP_FILE = CMakeFiles\Bomberman.dir\Player.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+build CMakeFiles/Bomberman.dir/src/Vector2D.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/Vector2D.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\Vector2D.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
   OBJECT_DIR = CMakeFiles\Bomberman.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
+
+build CMakeFiles/Bomberman.dir/src/Enemy.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/Enemy.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\Enemy.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
+
+build CMakeFiles/Bomberman.dir/src/EnemyOvapi.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/EnemyOvapi.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\EnemyOvapi.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
+
+build CMakeFiles/Bomberman.dir/src/Bomb.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:/Users/Alexandr/CLionProjects/Bomberman/src/Bomb.cpp || cmake_object_order_depends_target_Bomberman
+  DEP_FILE = CMakeFiles\Bomberman.dir\src\Bomb.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g -std=gnu++14
+  INCLUDES = -IC:/SDL/SDL_FILES/include -IC:/SDL/SDL_IMAGE/include
+  OBJECT_DIR = CMakeFiles\Bomberman.dir
+  OBJECT_FILE_DIR = CMakeFiles\Bomberman.dir\src
 
 
 # =============================================================================
@@ -99,9 +127,10 @@ build CMakeFiles/Bomberman.dir/Player.cpp.obj: CXX_COMPILER__Bomberman_Debug C$:
 #############################################
 # Link the executable Bomberman.exe
 
-build Bomberman.exe: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/main.cpp.obj CMakeFiles/Bomberman.dir/AbstractObject.cpp.obj CMakeFiles/Bomberman.dir/Bomb.cpp.obj CMakeFiles/Bomberman.dir/Enemy.cpp.obj CMakeFiles/Bomberman.dir/App.cpp.obj CMakeFiles/Bomberman.dir/Bonus.cpp.obj CMakeFiles/Bomberman.dir/Player.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build Bomberman.exe: CXX_EXECUTABLE_LINKER__Bomberman_Debug CMakeFiles/Bomberman.dir/src/main.cpp.obj CMakeFiles/Bomberman.dir/src/Game.cpp.obj CMakeFiles/Bomberman.dir/src/ErrorHandler.cpp.obj CMakeFiles/Bomberman.dir/src/Player.cpp.obj CMakeFiles/Bomberman.dir/src/Map.cpp.obj CMakeFiles/Bomberman.dir/src/TextureManager.cpp.obj CMakeFiles/Bomberman.dir/src/Vector2D.cpp.obj CMakeFiles/Bomberman.dir/src/Enemy.cpp.obj CMakeFiles/Bomberman.dir/src/EnemyOvapi.cpp.obj CMakeFiles/Bomberman.dir/src/Bomb.cpp.obj
+  FLAGS = -Wall -Wextra -Wconversion -pedantic -g
+  LINK_LIBRARIES = -lSDL2main  -lSDL2  -lSDL2_image  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -LC:/SDL/SDL_FILES/lib/x64   -LC:/SDL/SDL_IMAGE/lib/x64
   OBJECT_DIR = CMakeFiles\Bomberman.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
