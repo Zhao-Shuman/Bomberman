@@ -13,20 +13,21 @@
 #include "Vector2D.h"
 #include "Map"
 #include "TransformObject.h"
+#include "Enemy.h"
 
-class EnemyOvapi:public GameObject
+class EnemyOvapi:public Enemy
 {
 public:
-	EnemyOvapi (const char * p_filename, int p_x, int p_y, std::string tag_obj);
+	EnemyOvapi ( const char *p_filename, int p_x,int p_y, std::string p_tag_obj);
 	void update () override;
 	void draw () override;
 	void init () override;
-	bool checkCollision (const SDL_Rect &a, const SDL_Rect &b) override;
+//	bool checkCollision (const SDL_Rect &a, const SDL_Rect &b) override;
 	void setTex (const char *p_filename);
 	void transformPositionToTiles();
 	void findShortestPath(const SDL_Rect & en_rect,const SDL_Rect & pl_rect);
 	void printPath(vector<pair<int, int>>& path);
-	bool isNotVisited(const pair<int,int>& to_find, const vector<pair<int,int>>&path);
+	bool isVisited(const pair<int,int>& to_find, const vector<pair<int,int>>&path);
 
 	vector<pair<int, int>> path_to_player;
 	vector<pair<int, int>> coordinates_path;//path to player in coordinates that he should do tp get to the target

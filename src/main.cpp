@@ -17,27 +17,37 @@ int main (int argc, char *args[])
 	const int frameDelay = 1000 / FPS;
 	Uint32 frameStart;
 	int frameTime;
+	size_t gameMode;
 	//==================================================
 
-
-
-	game->initGame("Bomberman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 960, 960, false);
-	while (game->running())
+	while (game->continueGame)
 	{
-		frameStart = SDL_GetTicks(); //ticks since we first initialized sdl
-		game->handleEvents();
-		game->update();
-		game->render();
 
-		frameTime = SDL_GetTicks() - frameStart;//how long it took to go through 1 cycle of main loop
-
-		if (frameDelay > frameTime)
+		game->getUserInput();
+		if (game->continueGame)
+			game->initGame("Bomberman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 960, 960, false);
+		while (game->running())
 		{
-			SDL_Delay(frameDelay - frameTime);
+			frameStart = SDL_GetTicks(); //ticks since we first initialized sdl
+//			if (game->running())
+			if (game->running())
+				game->update();
+			if (game->running())
+				game->render();
+			game->handleEvents();
+
+			frameTime = SDL_GetTicks() - frameStart;//how long it took to go through 1 cycle of main loop
+
+			if (frameDelay > frameTime)
+			{
+				SDL_Delay(frameDelay - frameTime);
+			}
 		}
+
+		game->clean();
+//		std::cout << "Hello, World!" << std::endl;
+//		game->isRunning = true;
 	}
-	game->clean();
-	std::cout << "Hello, World!" << std::endl;
 	return 0;
 
 }

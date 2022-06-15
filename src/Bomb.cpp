@@ -33,7 +33,7 @@ void Bomb::draw ()
 	if (isPlaced)
 	{
 		TextureManager::draw(texture, srcRect, destRect);
-		cout << "nice" << endl;
+//		cout << "nice" << endl;
 	}
 
 
@@ -41,9 +41,7 @@ void Bomb::draw ()
 void Bomb::init ()
 {
 }
-bool Bomb::checkCollision (const SDL_Rect &a, const SDL_Rect &b)
-{
-}
+
 Bomb::~Bomb ()
 {
 
